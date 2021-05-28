@@ -1,0 +1,77 @@
+<%@ Master Language="VB" AutoEventWireup="true" CodeBehind="Site.master.vb" Inherits="WebTarea.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="es">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> Web Forms ASP.NET</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+</head>
+   <body style="height: 350px">
+		<form id="form1" runat="server" style="font-weight:bold">
+			<div style="padding: 1px; margin: 1px; font-size: x-large; font-weight:bold; text-decoration: underline; background-color: #CCFFFF; font-family: Arial; float: inherit; line-height: normal; text-align: center;">
+				<br />
+				Operaciones con Binomios<br />
+                <br/>
+			</div>
+			<p>
+			    &nbsp;</p>
+            <p>
+			Primer Número&nbsp;&nbsp;&nbsp;&nbsp;
+			<asp:textbox ID="TextBox1" runat="server"></asp:textbox>
+			</p>
+			<p>
+			    Segundo Número
+			<asp:textbox ID="TextBox2" runat="server"></asp:textbox>
+			</p>
+			<p>
+			    Tercer Número&nbsp;&nbsp;&nbsp;&nbsp; <asp:textbox ID="TextBox3" runat="server"></asp:textbox>
+			</p>
+			<p>
+			    Cuarto Número&nbsp; &nbsp;&nbsp;
+			<asp:textbox ID="TextBox4" runat="server"></asp:textbox>
+			</p>
+            <p>
+			    &nbsp;</p>
+			<div style="margin-left: 40px">
+                <asp:Button ID="Button1" runat="server" Text="Multiplicar" Width="135px" BackColor="#CCFFCC" />
+                &nbsp;&nbsp;&nbsp;
+                <asp:Button ID="Button2" runat="server" Text="Dividir" Width="135px" BackColor="#FFCCCC" />
+                <br />
+            </div>
+			<br />
+			<div style="margin-left: 40px">
+                <asp:Button ID="Button3" runat="server" Text="Sumar" BackColor="#CCCCFF" Width="135px" />
+            &nbsp;&nbsp;&nbsp;
+            <asp:Button ID="Button4" runat="server" Text="Restar" BackColor="#FFFFCC" Width="135px" />
+			</div>
+			<br />
+			<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			Respuesta
+			<asp:TextBox ID="Textbox5" runat="server"></asp:TextBox>
+			
+			<br />
+			
+			<div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <footer>
+                <p>&copy; <%: DateTime.Now.Year %> - Web Forms ASP.NET</p>
+				<p> Por Marleny Hoquee (8 - 941 - 905)</p>
+            </footer>
+        </div>
+
+		</form>
+	</body>
+</html>
